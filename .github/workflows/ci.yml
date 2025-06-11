@@ -28,6 +28,8 @@ jobs:
         cache: 'npm'
     - name: Install dependencies
       run: npm install
+    - name: Install json server
+      run: npm install -g json-server
     - run: npm ci
-    - name: Correr testes completos (JSON Server + Jest)
+    - name: Run tests
       run: npm run test:full
